@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for wwd 231 course">
+    <meta name="author" content="Abbigail Nelson">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/coursesiteplan.css">
+    
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+
+    <title>Abbigail Nelson | WDD 231 Course Home Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="site-branding">
+            <div class="logo-placeholder"></div>
+            <span class="site-name">WDD 231: Course Home Page | Abbigail Nelson</span>
+        </div>
+        <button id="menu-toggle" class="hamburger-icon">&#9776;</button>
+    </header>
+        
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="chamber/index.html">Chamber Project</a></li>
+            <li><a href="final/index.html">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+    
+        <section class="about-student-section">
+            <div class="about-me-card">
+                <h2>About Me</h2>
+                <p>Hello! My name is Abbigail Nelson and I was born and raised in Utah my whole life. I am currently a student at
+                BYU-Idaho, studying Software Development. I enjoy the outdoors, crafts, and spending time with my family. I’m passionate
+                about creating meaningful connections through technology and look forward to using my skills to serve others. Balancing
+                school, family, and faith has been challenging at times, but it has also been incredibly rewarding. I wouldn't be able
+                to get through this program without our heavenly father helping me every step of the way. I love him and hope to improve
+                each and every day like him.</p>
+            </div>
+
+            <div class="student-photo-card">
+                <h2>Student Photo</h2>
+                <img src="images/student-photo.jpg" alt="Abbigail Nelson student photo" class="student-photo">
+            </div>
+        </section>
+    
+        <section class="web-certificate-courses">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="filter-all">All</button>
+                <button id="filter-cse">CSE</button>
+                <button id="filter-wdd">WDD</button>
+            </div>
+            <div id="course-cards-container" class="course-grid">
+                <div class="course-card">WDD 130</div>
+                <div class="course-card">WDD 131</div>
+                <div class="course-card">WDD 231</div>
+            </div>
+            <p class="credit-summary">The total credits for course listed above is <span id="credit-total">6</span></p>
+        </section>
+    </main>
+    
+    <footer>
+    
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/abbigail-nelson-b44a31320/">
+                <img src="images/linkedin.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/abbigailf">
+                <img src="images/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.facebook.com/abbi.fletcher.18/">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+        </div>
+
+        <div class="copyright-info">
+            &copy; <span id="currentyear">2025</span> • Abbigail Nelson • Utah, USA
+            <p id="lastModified">Last Modification: </p>
+        </div>
+    
+    </footer>
+</body>
+</html>
