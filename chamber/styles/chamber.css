@@ -209,6 +209,17 @@ footer a:hover {
     font-size: 0.9rem;
 }
 
+main a {
+    color: #111111;
+}
+
+.footer-left a {
+    color: #ffffff;
+}
+a:hover, a:focus {
+    color:#CCCCCC;
+}
+
 /* --- MOBILE (≤ 600px) --- */
 @media (max-width: 600px) {
 
