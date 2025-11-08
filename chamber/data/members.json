@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Kent's Market",
+        "address": "300 E Main St#1, Tremonton, UT",
+        "phone": "(435) 257-7014",
+        "website": "https://kentsgrocery.com",
+        "image": "kents.png",
+        "membership": 3,
+        "notes": "Has been open for over 40 years"
+    },
+    {
+        "name": "Indulge Boutique",
+        "address": "15 S Tremont St, Tremonton, UT",
+        "phone": "(435) 257-0099",
+        "website": "https://indulgebtq.com",
+        "image": "indulge.png",
+        "membership": 1,
+        "notes": "Started in since 2020"
+    },
+    {
+        "name": "Ace Hardware",
+        "address": "250 E Main St, Tremonton, UT",
+        "phone": "(435) 257-5034",
+        "website": "https://acehardware.com",
+        "image": "ace.png",
+        "membership": 3,
+        "notes": "Locally owned and operated"
+    },
+    {
+        "name": "Results Gym & Fitness",
+        "address": "470 W Main St, Tremonton, UT",
+        "phone": "(435) 257-3333",
+        "website": "https://resultsgymandfitness.com",
+        "image": "fitness.png",
+        "membership": 2,
+        "notes": "Health and wellness gym"
+    },
+    {
+        "name": "Wood and Willow Home Decor",
+        "address": "472 W Main St ste 3, Tremonton, UT",
+        "phone": "(801) 512-1201",
+        "website": "https://woodandwillowhomedecor.com",
+        "image": "wawhd.jpg",
+        "membership": 2,
+        "notes": "Stylish Home Decor for Every Season"
+    },
+    {
+        "name": "YES Printing",
+        "address": "340 W Main St, Tremonton, UT",
+        "phone": "(435) 239-7530",
+        "website": "https://yesprintcopy.com",
+        "image": "yesprint.png",
+        "membership": 2,
+        "notes": "Printing services"
+    },
+    {
+        "name": "Pizza Plus",
+        "address": "55 S 100 E, Tremonton, UT",
+        "phone": "(435) 257-7587",
+        "website": "https://pizzaplusutah.com",
+        "image": "pizza.png",
+        "membership": 2,
+        "notes": "Made from scratch, Quality Pizza"
+    },
+    {
+        "name": "Crump Reese Motor Company",
+        "address": "655 W Main St, Tremonton, UT",
+        "phone": "(435) 291-1005",
+        "website": "https://crumpreese.com",
+        "image": "crumpreese.jpg",
+        "membership": 3,
+        "notes": "Longtime family-owned dealership"
+    },
+    {
+        "name": "Twisted Sugar",
+        "address": "486 W Main St, Tremonton, UT",
+        "phone": "(435) 278-9649",
+        "website": "https://tremonton.twistedsugarstores.com",
+        "image": "twistedsugar.png",
+        "membership": 2,
+        "notes": "Best Cookies in Tremonton"
+    }
+]
