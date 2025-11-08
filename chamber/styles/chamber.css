@@ -3,68 +3,102 @@ body {
     font-family: "Roboto", sans-serif;
     margin: 0;
     background-color: #f5f5f5;
-}
-
-/* --- Header --- */
-header {
-    background-color: rgb(21, 21, 82);
-    color: white;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    /* Ensuring all text is black by default, though header overrides this */
+    color: #000;
 }
 
 h1 {
     text-align: center;
 }
 
-.site-header {
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo-placeholder {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border: 1px solid #999;
-}
-
-.site-title {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 0;
-    color: white;
-}
-
-nav ul {
+ul {
     list-style: none;
-    display: flex;
-    gap: 1rem;
     padding: 0;
     margin: 0;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Header (UPDATED FOR NEW LAYOUT) --- */
+header {
+    /* Primary brand color for the background */
+    background-color: rgb(21, 21, 82);
+    color: white;
+    /* Increased vertical padding for a taller header bar */
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid #ccc;
+    /* Adds the subtle bottom line seen in the image */
+}
+
+/* Ensures content spans and is spaced correctly */
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Aligns logo and title horizontally */
+.logo-site {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo Placeholder Resize */
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border: none;
+}
+
+/* New Large Title Style */
+.site-title-large {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
+/* Navigation Link Container */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+/* General Link Style */
 nav a {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
+/* Active and Hover States (The Dark Gray Box) */
 nav ul li a:hover,
 nav ul li a.active {
     background-color: #444;
+    color: white;
 }
+
 
 /* --- View buttons --- */
 .view-buttons {
@@ -94,6 +128,7 @@ nav ul li a.active {
 /* --- Members: GRID (default) --- */
 .members-container.grid-view {
     display: grid;
+    /* Changed to 3 columns on desktop/larger screens */
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-items: center;
@@ -154,6 +189,7 @@ nav ul li a.active {
     width: 100%;
     max-width: 700px;
     flex-direction: row;
+    /* Changes card layout to horizontal row */
     justify-content: flex-start;
     align-items: center;
     text-align: left;
@@ -222,6 +258,13 @@ footer a:hover {
     header {
         flex-direction: column;
         text-align: center;
+        padding: 1rem;
+    }
+
+    .logo-site {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 1rem;
     }
 
     nav ul {
@@ -229,17 +272,17 @@ footer a:hover {
         align-items: center;
     }
 
+    nav a {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     /* Grid: 2 cards per row */
     .members-container.grid-view {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* List view: same as desktop (1x1 vertical) */
-    .members-container.list-view {
-        flex-direction: column;
-        align-items: center;
-    }
-
+    /* List view: stacks vertically */
     .members-container.list-view .member-card {
         flex-direction: column;
         text-align: center;
