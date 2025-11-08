@@ -1,6 +1,7 @@
 /* --- HEADER LAYOUT (Specific to Chamber structure) --- */
 
 header {
+    /* Overrides base padding from base.css and adds layout/border */
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -24,7 +25,7 @@ header {
     gap: 20px;
 }
 
-/* Logo Image Style (Using .logo-placeholder class for the actual image) */
+/* Logo Image Style */
 .logo-placeholder {
     width: 60px;
     height: 60px;
@@ -46,14 +47,14 @@ nav ul {
     gap: 0;
 }
 
-/* General Link Style */
+/* General Navigation Link Style */
 nav a {
-    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
     border-radius: 5px;
+    /* Color inherited from header a in base.css */
 }
 
 /* Active and Hover States (The Dark Gray Box) */
@@ -164,7 +165,7 @@ nav ul li a.active {
     border-radius: 10px;
 }
 
-/* --- FOOTER LAYOUT (Specific to Chamber structure) --- */
+/* --- FOOTER LAYOUT --- */
 footer {
     border-top: 1px solid #ccc;
 }
@@ -179,11 +180,7 @@ footer {
     margin: 0 auto;
 }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
-
+/* Footer link color is inherited/overridden in base.css */
 footer a:hover {
     text-decoration: underline;
     color: #f5f5f5;
