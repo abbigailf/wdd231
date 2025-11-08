@@ -50,7 +50,8 @@ nav ul {
 /* General Navigation Link Style */
 nav a {
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 12px 20px;
+    margin: 0 4px;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
     border-radius: 5px;
@@ -72,8 +73,8 @@ nav ul li a.active {
 }
 
 .view-buttons button {
-    padding: 8px 15px;
-    margin: 0 5px;
+    padding: 12px 20px;
+    margin: 0 8px;
     cursor: pointer;
     border: none;
     border-radius: 5px;
@@ -226,11 +227,21 @@ footer a:hover {
     nav ul {
         flex-direction: column;
         align-items: center;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     nav a {
         width: 100%;
         box-sizing: border-box;
+        padding: 5px 0;
+        text-align: center;
     }
 
     /* Grid: 2 cards per row */
