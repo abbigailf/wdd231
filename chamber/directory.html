@@ -7,6 +7,7 @@
     <meta name="description" content="Explore the Tremonton Chamber Directory — connect with trusted local businesses and community organizations.">
     <meta name="author" content="Abbigail Nelson">
 
+    <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/chamber.css">
 
     <script src="scripts/chamber.js" defer></script>
@@ -30,23 +31,22 @@
 </head>
 
 <body>
-    <header class="site-header">
+    <header>
         <div class="header-container">
-            <div class="logo-placeholder"></div>
-            <h1 class="site-title">Tremonton Chamber of Commerce</h1>
+            <a href="index.html"><img src="images/logo.png" alt="Tremonton Chamber of Commerce logo"></a>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html" class="active">Directory</a></li>
-                <li><a href="join.html">Join</a></li>
-                <li><a href="discover.html">Discover</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
-        <h1>Members</h1>
+        <h1>Tremonton Chamber of Commerce Directory</h1>
 
         <div class="view-buttons">
             <button id="grid" class="active">Grid</button>
