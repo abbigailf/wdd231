@@ -61,8 +61,8 @@ header {
 .logo-placeholder {
     width: 60px;
     height: 60px;
-    background-color: #ccc;
     border: none;
+    object-fit: contain;
 }
 
 /* New Large Title Style */
