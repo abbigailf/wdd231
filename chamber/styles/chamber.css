@@ -1,45 +1,12 @@
-/* --- Base --- */
-body {
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
-    /* Ensuring all text is black by default, though header overrides this */
-    color: #000;
-}
+/* --- HEADER LAYOUT (Specific to Chamber structure) --- */
 
-h1 {
-    text-align: center;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* --- Header (UPDATED FOR NEW LAYOUT) --- */
 header {
-    /* Primary brand color for the background */
-    background-color: rgb(21, 21, 82);
-    color: white;
-    /* Increased vertical padding for a taller header bar */
     padding: 1.5rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     border-bottom: 3px solid #ccc;
-    /* Adds the subtle bottom line seen in the image */
 }
 
 /* Ensures content spans and is spaced correctly */
@@ -57,7 +24,7 @@ header {
     gap: 20px;
 }
 
-/* Logo Placeholder Resize */
+/* Logo Image Style (Using .logo-placeholder class for the actual image) */
 .logo-placeholder {
     width: 60px;
     height: 60px;
@@ -70,21 +37,18 @@ header {
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
-    color: white;
+    color: #fff;
 }
 
 /* Navigation Link Container */
 nav ul {
-    list-style: none;
     display: flex;
     gap: 0;
-    padding: 0;
-    margin: 0;
 }
 
 /* General Link Style */
 nav a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 10px 15px;
     font-size: 1.1rem;
@@ -96,11 +60,11 @@ nav a {
 nav ul li a:hover,
 nav ul li a.active {
     background-color: #444;
-    color: white;
+    color: #fff;
 }
 
 
-/* --- View buttons --- */
+/* --- VIEW BUTTONS (Directory Specific) --- */
 .view-buttons {
     margin: 1rem 0;
     text-align: center;
@@ -112,8 +76,8 @@ nav ul li a.active {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: rgb(21, 21, 82);
-    color: white;
+    background-color: #151552;
+    color: #fff;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -125,10 +89,9 @@ nav ul li a.active {
     transform: scale(1.05);
 }
 
-/* --- Members: GRID (default) --- */
+/* --- MEMBERS: GRID (default view) --- */
 .members-container.grid-view {
     display: grid;
-    /* Changed to 3 columns on desktop/larger screens */
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     justify-items: center;
@@ -136,7 +99,7 @@ nav ul li a.active {
     padding: 1rem;
 }
 
-/* --- Member Card --- */
+/* --- Member Card (Shared Styles) --- */
 .member-card {
     display: flex;
     flex-direction: column;
@@ -147,7 +110,7 @@ nav ul li a.active {
     padding: 1rem;
     box-sizing: border-box;
     border-radius: 10px;
-    background: white;
+    background: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     gap: 0.5rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -162,7 +125,7 @@ nav ul li a.active {
 .member-card h3 {
     margin: 0;
     font-size: 1.1rem;
-    color: rgb(21, 21, 82);
+    color: #151552;
 }
 
 .member-card p {
@@ -176,7 +139,7 @@ nav ul li a.active {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --- Members: LIST --- */
+/* --- Members: LIST View --- */
 .members-container.list-view {
     display: flex;
     flex-direction: column;
@@ -189,7 +152,6 @@ nav ul li a.active {
     width: 100%;
     max-width: 700px;
     flex-direction: row;
-    /* Changes card layout to horizontal row */
     justify-content: flex-start;
     align-items: center;
     text-align: left;
@@ -202,12 +164,9 @@ nav ul li a.active {
     border-radius: 10px;
 }
 
-/* --- Footer --- */
+/* --- FOOTER LAYOUT (Specific to Chamber structure) --- */
 footer {
-    background-color: rgb(21, 21, 82);
     border-top: 1px solid #ccc;
-    padding: 1rem;
-    color: white;
 }
 
 .footer-content {
@@ -221,7 +180,7 @@ footer {
 }
 
 footer a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
