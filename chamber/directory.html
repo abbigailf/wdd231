@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Welcome to the Tremonton Chamber of Commerce website — connecting local businesses and community members.">
+    <meta name="description" content="Explore the Tremonton Chamber Directory — connect with trusted local businesses and community organizations.">
     <meta name="author" content="Abbigail Nelson">
 
     <link rel="stylesheet" href="styles/chamber.css">
@@ -13,14 +12,21 @@
     <script src="scripts/chamber.js" defer></script>
     <script src="scripts/members.js" defer></script>
 
-    <meta property="og:title" content="Tremonton Chamber of Commerce">
-    <meta property="og:description" content="Connecting local businesses and community members.">
-    <meta property="og:image" content="https://www.facebook.com/photo/?fbid=7112267318838768&set=a.100972863301617">
-    <meta property="og:url" content="https://www.facebook.com/abbi.fletcher.18/">
+    <meta property="og:title" content="Tremonton Chamber of Commerce | Directory">
+    <meta property="og:description" content="Discover Tremonton’s Chamber members — local businesses and organizations serving our community.">
+    <meta property="og:image" content="https://abbigailf.github.io/wdd231/chamber/images/og-directory.jpg">
+    <meta property="og:url" content="https://abbigailf.github.io/wdd231/chamber/directory.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 
     <link rel="icon" href="favicon.ico">
 
-    <title>Tremonton Chamber of Commerce</title>
+    <title>Tremonton Chamber of Commerce | Directory</title>
+
 </head>
 
 <body>
@@ -40,7 +46,7 @@
     </header>
 
     <main>
-        <h2>Members</h2>
+        <h1>Members</h1>
 
         <div class="view-buttons">
             <button id="grid" class="active">Grid</button>
@@ -48,6 +54,7 @@
         </div>
 
         <div id="members" class="members-container grid-view">
+            <!-- Member cards will be injected here by members.js -->
         </div>
     </main>
 
