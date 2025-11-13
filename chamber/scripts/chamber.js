@@ -41,4 +41,13 @@ if (gridButton && listButton && membersContainer) {
     listButton.classList.add("active");
     gridButton.classList.remove("active");
   });
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuButton = document.querySelector("#menuButton");
+    const navMenu = document.querySelector("nav ul");
+
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  });
 }
