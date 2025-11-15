@@ -142,8 +142,22 @@ nav ul li a.active {
     border-radius: 8px;
 }
 
+
 .cta-button {
+    display: inline-block;
     margin-top: 1rem;
+    padding: 12px 20px;
+    background: #ffb703;
+    color: #000;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background: #e0a102;
+    transform: scale(1.04);
 }
 
 /* =========================================
@@ -372,9 +386,16 @@ footer {
     margin: auto;
 }
 
+.footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
 .footer-center a img {
     width: 50px;
-    margin: 0 0.5rem;
+    margin: 0.5rem;
     object-fit: contain;
     transition: transform 0.3s;
 }
@@ -384,7 +405,8 @@ footer {
 }
 
 .footer-right p {
-    margin: 0.3rem 0;
+    margin: 1rem 0;
+    margin-left: 2rem;
 }
 
 /* =========================================
