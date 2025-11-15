@@ -474,8 +474,8 @@ footer a:hover {
 }
 
 .footer-center a img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     margin: 0 0.5rem;
     transition: transform 0.3s;
 }
