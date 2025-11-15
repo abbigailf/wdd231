@@ -136,7 +136,8 @@ main {
 /* Section Titles (Black bar headers like wireframe) */
 .home-grid h2 {
     background: #333;
-    color: white;
+    color: #fff;
+    /* Standardized to Hex */
     padding: 8px 12px;
     margin: 0 0 1rem 0;
     font-size: 1.2rem;
@@ -212,8 +213,7 @@ main {
 
 /* Detail lines (Humidity, Sunrise, Sunset, etc.) - span both columns */
 .weather-box p:nth-of-type(n+3) {
-    grid-column: 1 / 3;
-    /* FIX: Spans both columns to stack below icon/description */
+    grid-column: 2 / 3;
     margin: 0.2rem 0;
     font-size: 1rem;
     text-align: left;
@@ -286,7 +286,6 @@ main {
     grid-column: 1 / 2;
     grid-row: 3 / span 3;
     width: 100%;
-    /* FIX: Changed from 100px to 100% to fill the column */
     max-width: 100%;
     height: auto;
     background: #ccc;
@@ -301,8 +300,7 @@ main {
     padding-bottom: 0.2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: left;
-    /* FIX: Align title left */
+    text-align: center;
 }
 
 /* Info text - General rule */
@@ -319,8 +317,7 @@ main {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
-    text-align: left;
-    /* FIX: Align tagline left */
+    text-align: center;
 }
 
 /* 4. Phone Number (2nd <p>): Column 2, Row 3 */
@@ -330,10 +327,9 @@ main {
     margin: 0.2rem 0;
     font-size: 0.9rem;
     text-align: left;
-    /* FIX: Align phone left */
 }
 
-/* CONSOLIDATED SPOTLIGHT LINK STYLES (Replaces two previous rules) */
+/* CONSOLIDATED SPOTLIGHT LINK STYLES */
 .spotlight-box a {
     /* Grid Placement: Second Column, Row 4 */
     grid-column: 2 / 3;
