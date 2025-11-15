@@ -474,10 +474,11 @@ footer a:hover {
 }
 
 .footer-center a img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     margin: 0 0.5rem;
     transition: transform 0.3s;
+    object-fit: contain;
 }
 
 .footer-center a img:hover {
