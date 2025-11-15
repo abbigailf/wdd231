@@ -210,9 +210,10 @@ main {
     margin: 0;
 }
 
-/* Detail lines (High, Low, Humidity, 3rd <p> and onwards) - span both columns */
+/* Detail lines (Humidity, Sunrise, Sunset, etc.) - span both columns */
 .weather-box p:nth-of-type(n+3) {
-    grid-column: 2 / 3;
+    grid-column: 1 / 3;
+    /* FIX: Spans both columns to stack below icon/description */
     margin: 0.2rem 0;
     font-size: 1rem;
     text-align: left;
@@ -252,6 +253,7 @@ main {
     padding: 0;
 }
 
+/* --- SPOTLIGHT BOX: GRID CARD LAYOUT --- */
 .spotlight-box {
     background: #e6e6e6;
     padding: 1rem;
@@ -261,7 +263,6 @@ main {
     grid-template-columns: 100px 1fr;
     grid-template-rows: auto auto auto auto auto;
     gap: 0 10px;
-    flex-direction: column;
     align-items: start;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.25s ease;
@@ -284,13 +285,13 @@ main {
 .spotlight-box img {
     grid-column: 1 / 2;
     grid-row: 3 / span 3;
-    width: 100px;
+    width: 100%;
+    /* FIX: Changed from 100px to 100% to fill the column */
     max-width: 100%;
     height: auto;
     background: #ccc;
     border-radius: 8px;
-    margin-bottom: 0.8rem;
-    margin-top: 0.5rem;
+    margin: 0;
 }
 
 .spotlight-box h3 {
@@ -300,16 +301,17 @@ main {
     padding-bottom: 0.2rem;
     font-size: 1.2rem;
     font-weight: bold;
-    text-align: center;
+    text-align: left;
+    /* FIX: Align title left */
 }
 
-/* Info text */
+/* Info text - General rule */
 .spotlight-box p {
     margin: 0.2rem 0;
     font-size: 0.9rem;
-    text-align: center;
 }
 
+/* 1. Tagline (1st <p>): Spans both columns, Row 2 */
 .spotlight-box p:nth-of-type(1) {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
@@ -317,37 +319,36 @@ main {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #ccc;
-    text-align: center;
+    text-align: left;
+    /* FIX: Align tagline left */
 }
 
+/* 4. Phone Number (2nd <p>): Column 2, Row 3 */
 .spotlight-box p:nth-of-type(2) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
-    margin: 0.2rem 0 0.2rem 0;
+    margin: 0.2rem 0;
     font-size: 0.9rem;
     text-align: left;
+    /* FIX: Align phone left */
 }
 
-/* 5. URL: Column 2, row 4 */
+/* CONSOLIDATED SPOTLIGHT LINK STYLES (Replaces two previous rules) */
 .spotlight-box a {
+    /* Grid Placement: Second Column, Row 4 */
     grid-column: 2 / 3;
     grid-row: 4 / 5;
+
+    /* Spacing & Alignment */
     margin-top: 0.2rem;
     padding-top: 0;
+    text-align: left;
+
+    /* Typography */
     color: #000;
     font-weight: bold;
     text-decoration: underline;
     font-size: 0.9rem;
-    text-align: left;
-}
-
-/* Website link */
-.spotlight-box a {
-    margin-top: auto;
-    padding-top: 0.5rem;
-    color: #000;
-    font-weight: bold;
-    text-decoration: underline;
 }
 
 /* --- VIEW BUTTONS (Directory Specific) --- */
@@ -598,6 +599,7 @@ a:focus {
         width: 90%;
         padding: 0.5rem;
     }
+
     .hero-text h1 {
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
