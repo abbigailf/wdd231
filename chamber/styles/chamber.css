@@ -86,11 +86,22 @@ header {
 /* Mobile Menu Button */
 #menuButton {
     display: none;
-    font-size: 2rem;
-    background: none;
-    border: none;
+    background: var(--primary);
     color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#menuButton:hover,
+#menuButton:focus,
+#menuButton:active {
+    background: var(--white);
+    color: var(--black);
+    outline: none;
+    transform: scale(1.05);
 }
 
 /* Navigation */
@@ -329,6 +340,14 @@ main {
     background: var(--accent);
     color: var(--black);
     transform: scale(1.05);
+    padding: 4px 28px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 12px;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    margin: 0 8px;
+    transition: all 0.3s ease;
 }
 
 /* =========================================
@@ -417,6 +436,12 @@ footer {
 
     header {
         padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    nav ul {
+        top: calc(100% + 5px);
+        z-index: 100;
     }
 
     .logo-site {
@@ -426,6 +451,11 @@ footer {
 
     #menuButton {
         display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
     }
 
     nav ul {
@@ -433,11 +463,22 @@ footer {
         flex-direction: column;
         background: var(--primary);
         padding: 1rem;
-        width: 150px;
+        width: 100%;
         position: absolute;
-        right: 0;
+        left: 0;
         top: 100%;
-        border-radius: 8px;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+    
+    nav ul li a {
+        padding: 12px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     nav ul.show {
@@ -445,7 +486,7 @@ footer {
     }
 
     nav ul li a:hover {
-        background: var(--accent);
+        background: var(--white);
         color: var(--black);
     }
 
