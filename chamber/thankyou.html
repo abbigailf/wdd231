@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Thank you for Applying for the Tremonton Chamber of Commerce we hope it will help to connect local businesses and community members.">
+    <meta name="author" content="Abbigail Nelson">
+    
+    <title>Thank You — Tremonton Chamber</title>
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+
+    <link rel="stylesheet" href="styles/join.css">
+
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-site">
+                <img src="images/tremonton-logo.jpg" alt="Tremonton Chamber Logo" class="logo-placeholder">
+                <span class="site-title-large">Tremonton City Chamber of Commerce</span>
+            </div>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="thankyou-main">
+        <h1>Thank You for Applying!</h1>
+        <p>We’ve received your membership application. Below is a summary of your submission:</p>
+
+        <section class="thankyou-details">
+            <p><strong>First Name:</strong> <span id="out-fname"></span></p>
+            <p><strong>Last Name:</strong> <span id="out-lname"></span></p>
+            <p><strong>Email:</strong> <span id="out-email"></span></p>
+            <p><strong>Mobile:</strong> <span id="out-mobile"></span></p>
+            <p><strong>Business Name:</strong> <span id="out-org"></span></p>
+            <p><strong>Submitted At:</strong> <span id="out-time"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-content">
+            <div class="footer-left">
+                <h3>Tremonton Chamber of Commerce</h3>
+                <p>10 Main Street<br>Tremonton, Utah 84337</p>
+                <p><a href="mailto:info@tremontonutahcc.org">info@tremontonutahcc.org</a></p>
+                <p>(435) 555-2300</p>
+            </div>
+    
+            <div class="footer-center">
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://github.com/" target="_blank"><img src="images/github.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+    
+            <div class="footer-right">
+                <p>WDD231 Class Project<br>Abbigail Nelson</p>
+                <p>&copy; <span id="currentYear"></span> Tremonton Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        // Read query parameters
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("out-fname").textContent = params.get("fname") || "";
+        document.getElementById("out-lname").textContent = params.get("lname") || "";
+        document.getElementById("out-email").textContent = params.get("email") || "";
+        document.getElementById("out-mobile").textContent = params.get("mobile") || "";
+        document.getElementById("out-org").textContent = params.get("organization") || "";
+        document.getElementById("out-time").textContent = params.get("timestamp") || "";
+    </script>
+
+</body>
+
+</html>

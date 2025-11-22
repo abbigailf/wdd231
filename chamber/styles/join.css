@@ -1,0 +1,379 @@
+/* ========================================= */
+/* ===== Join Page Layout - MOBILE FIRST (Default) ===== */
+/* ========================================= */
+.join-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.join-main {
+    padding: 1rem;
+}
+
+.join-main h2 {
+    font-size: 1.8rem;
+    /* Same as join-title */
+    font-weight: 700;
+    margin-top: 2rem;
+    /* Space above heading */
+    margin-bottom: 1rem;
+    /* Space below heading */
+    text-align: center;
+    /* Mobile default */
+}
+
+/* By default, the main container stacks elements vertically for mobile/narrow screens */
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Ensure the form takes up most of the width on mobile */
+.join-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+/* ===== FORM STYLES (Applies to all sizes) ===== */
+
+.join-form form {
+    /* Ensures single-column stacking of labels/inputs on mobile */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    padding-bottom: 0.2rem ;
+}
+
+/* Ensure form inputs take full width on mobile */
+.join-form form input[type="text"],
+.join-form form input[type="email"],
+.join-form form input[type="tel"],
+.join-form form select,
+.join-form form textarea {
+    width: 100%;
+}
+
+.submit-btn {
+    margin-top: 1rem;
+    padding: .7rem;
+    background-color: var(--accent-color, #003366);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    /* Full width on mobile */
+}
+
+.submit-btn:hover {
+    opacity: .9;
+}
+
+/* ===== Membership Cards - MOBILE STACKING (Default) ===== */
+
+.membership-cards {
+    display: flex;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.member-card {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    max-width: 380px;
+    border-radius: 20px;
+    border: 2px solid #555;
+    padding: 1rem 1.2rem;
+    background: #fafafa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: cardFadeIn .7s forwards;
+}
+
+.member-card:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.member-card:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.member-card:nth-child(3) {
+    animation-delay: .7s;
+}
+
+.member-card:nth-child(4) {
+    animation-delay: .9s;
+}
+
+.member-card h3 {
+    margin-top: 0;
+}
+
+.member-card button {
+    margin-top: .5rem;
+    padding: 0.4rem 0.8rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    background: var(--accent-color, #003366);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@keyframes cardFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ===== MODALS (Applies to all sizes) ===== */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    padding: 1.5rem;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    animation: popIn .3s ease;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: .6rem;
+    right: .8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/*
+    =========================================
+    DESKTOP (≥ 700px) - Two-column main layout with two-column form
+    =========================================
+*/
+@media (min-width: 700px) {
+
+    /* --- 1. Main Container Grid (Form left 2fr, Cards right 1fr) --- */
+    .join-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    /* Place the form section in the wide left column */
+    .join-form {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        max-width: none;
+        padding: 0;
+    }
+
+    .join-form .join-title {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    .join-container>.join-title {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: left;
+        /* Align to the left of its column */
+    }
+
+    .join-form h2,
+    .membership-cards h2 {
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    /* --- 2. Form Internal Grid (Two-column input layout) --- */
+    .join-form form {
+        gap: 1rem 2rem;
+    }
+
+    /* Business / Organization Name (Assumes this is the 6th label and must span 2 columns) */
+    .join-form form label:nth-of-type(6) {
+        grid-column: 1 / 3;
+    }
+
+    /* Submit button always spans the full width and is centered */
+    .submit-btn {
+        grid-column: 1 / 2;
+        width: 90%;
+        margin: 1rem auto 0;
+    }
+
+    /* --- 3. Cards Column Positioning --- */
+
+    /* Position the "Membership Levels" heading to align with the card column */
+    .join-main h2:nth-of-type(1) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: left;
+    }
+
+    /* Place the membership cards in the narrow second column */
+    .membership-cards {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    /* Ensure form inputs take 100% of their new grid column */
+    .join-form form input[type="text"],
+    .join-form form input[type="email"],
+    .join-form form input[type="tel"],
+    .join-form form select,
+    .join-form form textarea {
+        width: 100%;
+    }
+}
+
+
+/*
+    =========================================
+    MOBILE ONLY STYLES (≤ 600px) - Original styles preserved
+    =========================================
+*/
+@media (max-width: 600px) {
+    header {
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    nav ul {
+        top: calc(100% + 5px);
+        z-index: 100;
+    }
+
+    .logo-site {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #menuButton {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 100;
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li a:hover {
+        background: var(--white);
+        color: var(--black);
+    }
+
+    .membership-levels {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .membership-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+    }
+
+    .member-card {
+        width: 90%;
+        max-width: 350px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 1.2rem;
+        border-radius: 15px;
+    }
+
+    .member-card button {
+        width: 60%;
+        margin: 0.5rem auto 0;
+        display: block;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
