@@ -1,5 +1,5 @@
 /* ========================================= */
-/* ===== Join Page Layout - MOBILE FIRST (Default) ===== */
+/* ===== JOIN PAGE LAYOUT — MOBILE FIRST ===== */
 /* ========================================= */
 
 /* ---------------- Page Title ---------------- */
@@ -7,8 +7,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     text-align: center;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin: 1.5rem 0 1rem;
 }
 
 /* ---------------- Main Layout ---------------- */
@@ -19,12 +18,11 @@
 .join-main h2 {
     font-size: 1.8rem;
     font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem;
     text-align: center;
 }
 
-/* Default: vertical layout on mobile */
+/* Mobile-first: column layout */
 .join-container {
     display: flex;
     flex-direction: column;
@@ -42,17 +40,17 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding-bottom: 0.5rem;
+    padding-bottom: .5rem;
 }
 
 .join-form label {
     display: flex;
     flex-direction: column;
     font-weight: 600;
-    padding-bottom: 0.2rem;
+    padding-bottom: .2rem;
 }
 
-/* Input full-width for mobile */
+/* Input full-width (mobile-first) */
 .join-form form input[type="text"],
 .join-form form input[type="email"],
 .join-form form input[type="tel"],
@@ -66,7 +64,7 @@
     margin-top: 1rem;
     padding: .7rem;
     background-color: var(--accent-color, #003366);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 6px;
     font-size: 1rem;
@@ -79,10 +77,10 @@
 }
 
 /* ========================================= */
-/* ===== Membership Cards - MOBILE FIRST ===== */
+/* ===== MEMBERSHIP CARDS — MOBILE FIRST ===== */
 /* ========================================= */
 
-/* BASE CARD STYLES (No repeats) */
+/* Base Card Style — Option 1 (Global = Desktop Look) */
 .member-card {
     width: 90%;
     max-width: 380px;
@@ -99,8 +97,8 @@
 
 .membership-cards {
     display: flex;
-    gap: 1.5rem;
     flex-direction: column;
+    gap: 1.5rem;
     align-items: center;
     width: 100%;
 }
@@ -128,18 +126,18 @@
 
 .member-card button {
     margin-top: .5rem;
-    padding: 0.4rem 0.8rem;
-    display: block;
+    padding: .4rem .8rem;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     background: var(--accent-color, #003366);
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
 }
 
+/* Card animation */
 @keyframes cardFadeIn {
     to {
         transform: translateY(0);
@@ -167,7 +165,7 @@
 }
 
 .modal-content {
-    background: white;
+    background: #fff;
     padding: 1.5rem;
     max-width: 400px;
     border-radius: 10px;
@@ -201,7 +199,6 @@
 
 @media (min-width: 700px) {
 
-    /* --- Main Container Grid --- */
     .join-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -232,28 +229,25 @@
     .join-form h2,
     .membership-cards h2 {
         text-align: left;
-        margin-top: 0;
-        margin-bottom: 1rem;
+        margin: 0 0 1rem;
     }
 
-    /* --- Form two-column grid (internal) --- */
+    /* Form spacing improvement */
     .join-form form {
         gap: 1rem 2rem;
     }
 
-    /* Business / Organization Name spans both columns */
+    /* Business/Organization Name spans both columns */
     .join-form form label:nth-of-type(6) {
         grid-column: 1 / 3;
     }
 
-    /* Submit button styling on desktop */
     .submit-btn {
         grid-column: 1 / 2;
         width: 90%;
         margin: 1rem auto 0;
     }
 
-    /* Card column */
     .join-main h2:nth-of-type(1) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
@@ -264,19 +258,10 @@
         grid-column: 2 / 3;
         grid-row: 2 / 3;
     }
-
-    /* Inputs stay full width */
-    .join-form form input[type="text"],
-    .join-form form input[type="email"],
-    .join-form form input[type="tel"],
-    .join-form form select,
-    .join-form form textarea {
-        width: 100%;
-    }
 }
 
 /* ========================================= */
-/* ===== MOBILE ONLY (≤ 600px) ===== */
+/* ===== MOBILE (≤ 600px) ===== */
 /* ========================================= */
 
 @media (max-width: 600px) {
@@ -289,6 +274,19 @@
     nav ul {
         top: calc(100% + 5px);
         z-index: 100;
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    }
+
+    nav ul.show {
+        display: flex;
     }
 
     .logo-site {
@@ -305,30 +303,11 @@
         color: #fff;
     }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background: var(--primary);
-        padding: 1rem;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        border-radius: 0;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        z-index: 100;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
     nav ul li a {
         padding: 12px 0;
         margin: 0;
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 100%;
     }
 
@@ -344,23 +323,16 @@
         margin-top: 2rem;
     }
 
-    /* MOBILE OVERRIDES for member cards */
+    /* Mobile card-specific tweaks */
     .member-card {
         max-width: 350px;
         border-radius: 15px;
         padding: 1.2rem;
-        margin: 0 auto;
-    }
-
-    .membership-cards {
-        flex-direction: column;
-        gap: 1.2rem;
-        width: 100%;
     }
 
     .member-card button {
         width: 60%;
-        margin: 0.5rem auto 0;
+        margin: .5rem auto 0;
     }
 
     .footer-content {
