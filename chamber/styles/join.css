@@ -12,6 +12,7 @@
     --gray-300: #e6e6e6;
     --white: #ffffff;
     --black: #000000;
+    --grey: #444;
 }
 
 header {
@@ -86,7 +87,7 @@ nav a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background: #444;
+    background: var(--grey);
     color: var(--white);
 }
 
@@ -151,7 +152,7 @@ nav ul li a.active {
     margin-top: 1rem;
     padding: .7rem;
     background-color: var(--accent-color, #003366);
-    color: #fff;
+    color: var(--white);
     border: none;
     border-radius: 6px;
     font-size: 1rem;
@@ -218,7 +219,7 @@ nav ul li a.active {
     margin-left: auto;
     margin-right: auto;
     background: var(--accent-color, #003366);
-    color: #fff;
+    color: var(--white);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -252,7 +253,7 @@ nav ul li a.active {
 }
 
 .modal-content {
-    background: #fff;
+    background: var(--white);
     padding: 1.5rem;
     max-width: 400px;
     border-radius: 10px;
@@ -387,7 +388,7 @@ nav ul li a.active {
         background: none;
         border: none;
         cursor: pointer;
-        color: #fff;
+        color: var(--white);
     }
 
     nav ul li a {
