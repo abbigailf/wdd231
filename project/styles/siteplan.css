@@ -1,0 +1,49 @@
+:root {
+    --primary: #CE6A85;
+    /* Blush Rose for headings */
+    --accent: #FFE3DC;
+    /* Soft Blush background */
+    --secondary: #87A878;
+    /* Sage Green for accents */
+    --dark: #363636;
+    /* Graphite for text */
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: var(--accent);
+    color: var(--dark);
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark);
+    font-family: "Montserrat", sans-serif;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.wireframe-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    background: #fafafa;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px dashed var(--secondary);
+}
+
+.wireframe-box img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
