@@ -1,0 +1,429 @@
+/* ========================================= */
+/* ===== JOIN PAGE LAYOUT — MOBILE FIRST ===== */
+/* ========================================= */
+
+/* ---------------- Page Title ---------------- */
+:root {
+    --primary: #151552;
+    --accent: #ffb703;
+    --light: #f5f5f5;
+    --gray-100: #ccc;
+    --gray-200: #dcdcdc;
+    --gray-300: #e6e6e6;
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #444;
+}
+
+header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--gray-100);
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-site {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.site-title-large {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: var(--white);
+}
+
+/* Mobile Menu Button */
+#menuButton {
+    display: none;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#menuButton:hover,
+#menuButton:focus,
+#menuButton:active {
+    background: var(--white);
+    color: var(--black);
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 0 4px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: var(--grey);
+    color: var(--white);
+}
+
+.join-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 1.5rem 0 1rem;
+}
+
+/* ---------------- Main Layout ---------------- */
+.join-main {
+    padding: 1rem;
+}
+
+.join-main h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem;
+    text-align: center;
+}
+
+/* Mobile-first: column layout */
+.join-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* ---------------- Form Container ---------------- */
+.join-form {
+    width: 100%;
+    max-width: 450px;
+}
+
+.join-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: .5rem;
+}
+
+.join-form label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    padding-bottom: .2rem;
+}
+
+/* Input full-width (mobile-first) */
+.join-form form input[type="text"],
+.join-form form input[type="email"],
+.join-form form input[type="tel"],
+.join-form form select,
+.join-form form textarea {
+    width: 100%;
+}
+
+/* ---------------- Submit Button ---------------- */
+.submit-btn {
+    margin-top: 1rem;
+    padding: .7rem;
+    background-color: var(--accent-color, #003366);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    opacity: .9;
+}
+
+/* ========================================= */
+/* ===== MEMBERSHIP CARDS — MOBILE FIRST ===== */
+/* ========================================= */
+
+/* Base Card Style — Option 1 (Global = Desktop Look) */
+.member-card {
+    width: 90%;
+    max-width: 380px;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    border: 2px solid #555;
+    border-radius: 20px;
+    background: #fafafa;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: cardFadeIn .7s forwards;
+}
+
+.membership-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+/* Staggered animations */
+.member-card:nth-child(1) {
+    animation-delay: .1s;
+}
+
+.member-card:nth-child(2) {
+    animation-delay: .5s;
+}
+
+.member-card:nth-child(3) {
+    animation-delay: .7s;
+}
+
+.member-card:nth-child(4) {
+    animation-delay: .9s;
+}
+
+.member-card h3 {
+    margin-top: 0;
+}
+
+.member-card button {
+    margin-top: .5rem;
+    padding: .4rem .8rem;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--accent-color, #003366);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Card animation */
+@keyframes cardFadeIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ========================================= */
+/* ===== MODALS ===== */
+/* ========================================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(3px);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 1.5rem;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+    animation: popIn .3s ease;
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close {
+    position: absolute;
+    top: .6rem;
+    right: .8rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+/* ========================================= */
+/* ===== DESKTOP (≥ 700px) ===== */
+/* ========================================= */
+
+@media (min-width: 700px) {
+
+    .join-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .join-form {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        max-width: none;
+        padding: 0;
+    }
+
+    .join-form .join-title {
+        text-align: left;
+        padding-bottom: 1rem;
+    }
+
+    .join-container>.join-title {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: left;
+    }
+
+    .join-form h2,
+    .membership-cards h2 {
+        text-align: left;
+        margin: 0 0 1rem;
+    }
+
+    /* Form spacing improvement */
+    .join-form form {
+        gap: 1rem 2rem;
+    }
+
+    /* Business/Organization Name spans both columns */
+    .join-form form label:nth-of-type(6) {
+        grid-column: 1 / 3;
+    }
+
+    .submit-btn {
+        grid-column: 1 / 2;
+        width: 90%;
+        margin: 1rem auto 0;
+    }
+
+    .join-main h2:nth-of-type(1) {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        text-align: left;
+    }
+
+    .membership-cards {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+}
+
+/* ========================================= */
+/* ===== MOBILE (≤ 600px) ===== */
+/* ========================================= */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    nav ul {
+        top: calc(100% + 5px);
+        z-index: 100;
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        padding: 1rem;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        border-radius: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .logo-site {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #menuButton {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--white);
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    nav ul li a:hover {
+        background: var(--white);
+        color: var(--black);
+    }
+
+    .membership-levels {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    /* Mobile card-specific tweaks */
+    .member-card {
+        max-width: 350px;
+        border-radius: 15px;
+        padding: 1.2rem;
+    }
+
+    .member-card button {
+        width: 60%;
+        margin: .5rem auto 0;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}

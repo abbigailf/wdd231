@@ -1,28 +1,24 @@
-// Display current year and last modified date
+// Display current year and last modified date (Always run)
 document.getElementById("currentYear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-// Example placeholder weather data (optional)
-const weatherInfo = document.getElementById("weather-info");
-const forecast = document.getElementById("forecast");
+// --- MOBILE MENU CODE (Moved outside the 'if' block to run on ALL pages) ---
 
-if (weatherInfo) {
-  weatherInfo.innerHTML = `
-    <p>49°F - Partly Cloudy</p>
-    <p>High: 55°F | Low: 28°F</p>
-    <p>Humidity: 53%</p>
-  `;
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const menuButton = document.querySelector("#menuButton");
+  const navMenu = document.querySelector("nav ul");
 
-if (forecast) {
-  forecast.innerHTML = `
-    <li>Today: 55°F</li>
-    <li>Sunday: 57°F</li>
-    <li>Monday: 58°F</li>
-  `;
-}
+  // Check if the menu button exists before trying to add a listener
+  if (menuButton) {
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  }
+});
 
-// Grid/List view toggle
+
+// --- DIRECTORY PAGE SPECIFIC LOGIC (Remains inside the 'if' block) ---
+
 const gridButton = document.querySelector("#grid");
 const listButton = document.querySelector("#list");
 const membersContainer = document.querySelector("#members");

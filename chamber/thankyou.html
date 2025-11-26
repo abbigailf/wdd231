@@ -2,19 +2,22 @@
 <html lang="en-US">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Tremonton Chamber Directory — connect with trusted local businesses and community organizations.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Thank you for Applying for the Tremonton Chamber of Commerce we hope it will help to connect local businesses and community members.">
     <meta name="author" content="Abbigail Nelson">
 
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/chamber.css">
 
-    <script src="scripts/chamber.js" defer></script>
-    <script src="scripts/members.js" defer></script>
+    <link rel="stylesheet" href="styles/join.css">
 
-    <meta property="og:title" content="Tremonton Chamber of Commerce | Directory">
-    <meta property="og:description" content="Discover Tremonton’s Chamber members — local businesses and organizations serving our community.">
+    <script src="scripts/join.js" defer></script>
+
+    <meta property="og:title" content="Tremonton Chamber of Commerce | Thank you">
+    <meta property="og:description"
+        content="Discover Tremonton’s Chamber members — local businesses and organizations serving our community.">
     <meta property="og:image" content="https://abbigailf.github.io/wdd231/chamber/images/og-directory.jpg">
     <meta property="og:url" content="https://abbigailf.github.io/wdd231/chamber/directory.html">
     <meta property="og:type" content="website">
@@ -26,11 +29,11 @@
 
     <link rel="icon" href="favicon.ico">
 
-    <title>Tremonton Chamber of Commerce | Directory</title>
-
+    <title>Thank You — Tremonton Chamber</title>
 </head>
 
 <body>
+
     <header>
         <div class="header-container">
             <div class="logo-site">
@@ -41,25 +44,27 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="directory.html" class="active">Directory</a></li>
+                    <li><a href="directory.html">Directory</a></li>
                     <li><a href="join.html">Join</a></li>
-                    <li><a href="discover.html">Discover</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
-        <h1>Tremonton Chamber of Commerce Directory</h1>
+    <main class="thankyou-main">
+        <h1>Thank You for Applying!</h1>
+        <p>We’ve received your membership application. Below is a summary of your submission:</p>
 
-        <div class="view-buttons">
-            <button id="grid" class="active">Grid</button>
-            <button id="list">List</button>
-        </div>
-
-        <div id="members" class="members-container grid-view">
-            <!-- Member cards will be injected here by members.js -->
-        </div>
+        <section class="thankyou-details">
+            <h2>Summary</h2>
+            <p><strong>First Name:</strong> <span id="out-fname"></span></p>
+            <p><strong>Last Name:</strong> <span id="out-lname"></span></p>
+            <p><strong>Email:</strong> <span id="out-email"></span></p>
+            <p><strong>Mobile:</strong> <span id="out-mobile"></span></p>
+            <p><strong>Business Name:</strong> <span id="out-org"></span></p>
+            <p><strong>Submitted At:</strong> <span id="out-time"></span></p>
+        </section>
     </main>
 
     <footer>
@@ -70,13 +75,13 @@
                 <p><a href="mailto:info@tremontonutahcc.org">info@tremontonutahcc.org</a></p>
                 <p>(435) 555-2300</p>
             </div>
-
+    
             <div class="footer-center">
                 <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
                 <a href="https://github.com/" target="_blank"><img src="images/github.png" alt="Github"></a>
                 <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
             </div>
-
+    
             <div class="footer-right">
                 <p>WDD231 Class Project<br>Abbigail Nelson</p>
                 <p>&copy; <span id="currentYear"></span> Tremonton Chamber of Commerce</p>
@@ -84,6 +89,19 @@
             </div>
         </section>
     </footer>
+
+    <script>
+        // Read query parameters
+        const params = new URLSearchParams(window.location.search);
+
+        document.getElementById("out-fname").textContent = params.get("fname") || "";
+        document.getElementById("out-lname").textContent = params.get("lname") || "";
+        document.getElementById("out-email").textContent = params.get("email") || "";
+        document.getElementById("out-mobile").textContent = params.get("mobile") || "";
+        document.getElementById("out-org").textContent = params.get("organization") || "";
+        document.getElementById("out-time").textContent = params.get("timestamp") || "";
+    </script>
+
 </body>
 
 </html>
