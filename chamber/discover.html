@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Tremonton, Utah — local attractions, history, and community highlights.">
+    <meta name="author" content="Abbigail Nelson">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <link rel="stylesheet" href="styles/discover.css">
+
+    <script src="scripts/chamber.js" defer></script>
+    <script src="scripts/discover.js" type="module"></script>
+
+    <title>Discover Tremonton | Chamber of Commerce</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-site">
+                <img src="images/tremonton-logo.jpg" alt="Tremonton Chamber Logo" class="logo-placeholder">
+                <span class="site-title-large">Tremonton City Chamber of Commerce</span>
+            </div>
+            <button id="menuButton" aria-label="Toggle Menu">☰</button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html" class="active">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="discover">
+
+        <!-- Visitor Message -->
+        <div id="visit-message" class="visit-message-box"></div>
+
+        <h1>Discover Tremonton</h1>
+        <p class="discover-intro">
+            Explore some of Tremonton’s most notable attractions, parks, historic locations, and local favorites!
+        </p>
+
+        <!-- Grid of cards -->
+        <div class="discover-grid" id="discoverGrid"></div>
+
+    </main>
+
+    <footer>
+        <section class="footer-content">
+            <div class="footer-left">
+                <h3>Tremonton Chamber of Commerce</h3>
+                <p>10 Main Street<br>Tremonton, Utah 84337</p>
+                <p><a href="mailto:info@tremontonutahcc.org">info@tremontonutahcc.org</a></p>
+                <p>(435) 555-2300</p>
+            </div>
+
+            <div class="footer-center">
+                <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://github.com/" target="_blank"><img src="images/github.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+
+            <div class="footer-right">
+                <p>WDD231 Class Project<br>Abbigail Nelson</p>
+                <p>&copy; <span id="currentYear"></span> Tremonton Chamber of Commerce</p>
+                <p>Last Modification: <span id="lastModified"></span></p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,281 @@
+/* discover.css */
+
+/* === BASE STYLES === */
+#discover {
+    padding: 1rem;
+}
+
+.discover-intro {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+.visit-message-box {
+    background: #e8f4ff;
+    border-left: 5px solid #0077cc;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+}
+
+.discover-grid {
+    display: grid;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.discover-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.discover-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+/* Base styles for the image figure and image */
+.discover-card figure {
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0 0 1rem 0;
+}
+
+.discover-card figure img {
+    transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Reset margins for content elements */
+.discover-card p,
+.discover-card address {
+    margin: 0 0 0.5rem 0;
+}
+
+
+/* Learn More Button Styling */
+.learn-more-btn {
+    display: block;
+    width: 100%;
+    padding: 1.1rem 0;
+    background: #333;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-top: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.learn-more-btn:hover {
+    background: #444;
+    transform: scale(1.03);
+}
+
+.learn-more-btn:active {
+    transform: scale(0.97);
+}
+
+/* Assign grid areas */
+.card1 {
+    grid-area: card1;
+}
+
+.card2 {
+    grid-area: card2;
+}
+
+.card3 {
+    grid-area: card3;
+}
+
+.card4 {
+    grid-area: card4;
+}
+
+.card5 {
+    grid-area: card5;
+}
+
+.card6 {
+    grid-area: card6;
+}
+
+.card7 {
+    grid-area: card7;
+}
+
+.card8 {
+    grid-area: card8;
+}
+
+
+/* --------------------------- */
+/* 📱 SMALL (320px–640px) */
+/* --------------------------- */
+@media (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+
+    .discover-card {
+        display: block;
+    }
+
+    .learn-more-btn {
+        width: 100%;
+    }
+}
+
+/* --------------------------- */
+/* 📏 MEDIUM (641px–1024px) */
+/* CSS Grid Internal Layout & Hover Effect */
+/* --------------------------- */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5"
+            "card6"
+            "card7"
+            "card8";
+    }
+
+    /* === Internal Card Layout using CSS Grid === */
+    .discover-card {
+        display: grid;
+        padding: 1.5rem;
+        grid-template-columns: 1fr 2fr 0.5fr;
+        grid-template-rows: auto 1fr auto auto auto;
+        gap: 0.5rem 1.5rem;
+        align-items: start;
+    }
+
+    .discover-card h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 0.5rem;
+    }
+
+    .discover-card figure {
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+        margin: 0;
+        height: 200px;
+        width: 300px;
+    }
+
+    .discover-card figure img {
+        height: 100%;
+    }
+    .discover-card address {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+    }
+
+    .discover-card p {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3;
+    }
+
+    .learn-more-btn {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+
+    /* === Image Hover Effect === */
+    .discover-card figure:hover img {
+        transform: scale(1.1);
+        filter: brightness(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+
+/* --------------------------- */
+/* 🖥️ LARGE (1025px and up) */
+/* Two Column Grid + Internal Card Grid Layout */
+/* --------------------------- */
+@media (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+        gap: 4.5rem 1.5rem;
+        padding-bottom: 2rem;
+    }
+
+    /* === Internal Card Layout using CSS Grid (Same structure as medium) === */
+    .discover-card {
+        display: grid;
+        padding: 1.5rem;
+        grid-template-columns: 1fr 2fr 0.5fr;
+        grid-template-rows: auto 1fr auto auto auto;
+        gap: 0.5rem 1.5rem;
+        align-items: start;
+        height: 100%;
+    }
+
+    .discover-card h2 {
+        grid-column: 1 / -1;
+        margin-bottom: 0.5rem;
+    }
+
+    .discover-card figure {
+        grid-column: 1 / 2;
+        grid-row: 2 / 5;
+        margin: 0;
+        height: 200px;
+        width: 300px;
+    }
+
+    .discover-card figure img {
+        height: 100%;
+    }
+
+    .discover-card address {
+        grid-column: 2 / 4;
+        grid-row: 3 / 4;
+    }
+
+    .discover-card p {
+        grid-column: 2 / 4;
+        grid-row: 2 / 3 ;
+    }
+
+    .learn-more-btn {
+        grid-column: 1 / -1;
+        grid-row: 5 / 6;
+        width: 100%;
+        margin: 1rem 0 0 0;
+    }
+}
