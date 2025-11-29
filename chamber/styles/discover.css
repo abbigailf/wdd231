@@ -394,7 +394,7 @@ footer {
             "card5 card6"
             "card7 card8";
         gap: 4.5rem 1.5rem;
-        padding-bottom: 2rem;
+        padding-bottom: 3rem;
     }
 
     /* === Internal Card Layout using CSS Grid (Same structure as medium) === */
