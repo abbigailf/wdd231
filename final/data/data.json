@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Chocolate Chip Cookies",
+        "image": "images/cookie1.jpg",
+        "description": "Soft, chewy, classic chocolate chip cookies.",
+        "instructions": "Mix dry ingredients. Cream butter and sugar. Combine and bake at 350°F for 10–12 minutes."
+    },
+    {
+        "id": 2,
+        "name": "Sugar Cookies",
+        "image": "images/cookie2.jpg",
+        "description": "Simple sugar cookies perfect for frosting.",
+        "instructions": "Beat butter and sugar. Add flour. Chill dough, cut shapes, and bake at 350°F."
+    },
+    {
+        "id": 3,
+        "name": "Snickerdoodles",
+        "image": "images/cookie3.jpg",
+        "description": "Soft cinnamon sugar cookies.",
+        "instructions": "Roll dough balls in cinnamon sugar and bake at 375°F for 8 minutes."
+    },
+    {
+        "id": 4,
+        "name": "Peanut Butter Cookies",
+        "image": "images/cookie4.jpg",
+        "description": "Classic criss-cross peanut butter cookies.",
+        "instructions": "Press with fork, bake at 350°F for 10 minutes."
+    },
+    {
+        "id": 5,
+        "name": "Oatmeal Raisin Cookies",
+        "image": "images/cookie5.jpg",
+        "description": "Chewy oatmeal cookies with raisins.",
+        "instructions": "Mix oats with dough, bake at 350°F for 12 minutes."
+    },
+    {
+        "id": 6,
+        "name": "White Chocolate Macadamia",
+        "image": "images/cookie6.jpg",
+        "description": "Crunchy macadamia nuts with white chocolate.",
+        "instructions": "Fold in nuts and chips, bake at 350°F."
+    },
+    {
+        "id": 7,
+        "name": "Molasses Cookies",
+        "image": "images/cookie7.jpg",
+        "description": "Spiced cookies rolled in sugar.",
+        "instructions": "Bake at 325°F for 12 minutes."
+    },
+    {
+        "id": 8,
+        "name": "Double Chocolate Cookies",
+        "image": "images/cookie8.jpg",
+        "description": "Rich, fudgy cookies for chocolate lovers.",
+        "instructions": "Bake at 350°F for 10 minutes."
+    },
+    {
+        "id": 9,
+        "name": "Lemon Crinkle Cookies",
+        "image": "images/cookie9.jpg",
+        "description": "Bright lemon flavor with crinkle texture.",
+        "instructions": "Roll dough in powdered sugar before baking."
+    },
+    {
+        "id": 10,
+        "name": "Shortbread Cookies",
+        "image": "images/cookie10.jpg",
+        "description": "Buttery, melt-in-your-mouth cookies.",
+        "instructions": "Bake at 325°F for 20 minutes."
+    },
+    {
+        "id": 11,
+        "name": "Red Velvet Cookies",
+        "image": "images/cookie11.jpg",
+        "description": "Soft red velvet with cream cheese chips.",
+        "instructions": "Bake at 350°F for 10–12 minutes."
+    },
+    {
+        "id": 12,
+        "name": "S'mores Cookies",
+        "image": "images/cookie12.jpg",
+        "description": "Chocolate, marshmallow, and graham in one bite.",
+        "instructions": "Add mini marshmallows halfway through baking."
+    },
+    {
+        "id": 13,
+        "name": "Pumpkin Spice Cookies",
+        "image": "images/cookie13.jpg",
+        "description": "Warm fall spices and soft texture.",
+        "instructions": "Bake at 350°F for 12 minutes."
+    },
+    {
+        "id": 14,
+        "name": "Coconut Cookies",
+        "image": "images/cookie14.jpg",
+        "description": "Chewy coconut cookie perfection.",
+        "instructions": "Fold in shredded coconut before baking."
+    },
+    {
+        "id": 15,
+        "name": "Mint Chocolate Cookies",
+        "image": "images/cookie15.jpg",
+        "description": "Refreshing mint with chocolate chunks.",
+        "instructions": "Add mint extract for stronger flavor."
+    }
+]

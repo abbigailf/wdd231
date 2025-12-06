@@ -1,0 +1,376 @@
+/* -----------------------
+   Root Colors
+------------------------ */
+:root {
+    --graphite: #2a2a2a;
+    --blush: #8A3B52;
+    --sage: #87A878;
+    --softblush: #FFE3DC;
+
+    /* Added missing grays for spotlight boxes */
+    --gray-100: #f0f0f0;
+    --gray-200: #dcdcdc;
+    --gray-300: #bfbfbf;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: var(--blush);
+    border-bottom: 3px solid var(--softblush);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Style ALL links, unless they are inside nav, footer-content, or have .cta-button */
+a {
+    color: var(--blush);
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+nav a,
+.footer-content a,
+a.cta-button {
+    text-decoration: none !important;
+    color: white;
+}
+
+a:hover {
+    color: var(--graphite);
+}
+
+.header-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-site {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-placeholder {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.site-title-large {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60vw;
+}
+
+/* Mobile Menu Button */
+#menuButton {
+    display: none;
+    background: var(--blush);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#menuButton:hover,
+#menuButton:focus,
+#menuButton:active {
+    background: #fff;
+    color: var(--graphite);
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 0 4px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    color: #fff;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background: var(--graphite);
+    color: #fff;
+}
+
+/* Main layout */
+.tips-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* Intro section */
+.tips-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.tips-intro h2 {
+    font-size: 2rem;
+    color: var(--graphite);
+    margin-bottom: .5rem;
+}
+
+.tips-intro p {
+    font-size: 1.1rem;
+    color: var(--graphite);
+}
+
+/* Center main headers + paragraphs */
+.tips-intro,
+.tip-card h3,
+.tip-card p {
+    text-align: center;
+}
+
+/* Keep lists left-aligned */
+.tip-card ul {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+/* Individual tip cards */
+.tip-card {
+    background: var(--gray-100);
+    margin-bottom: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.25s;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.tip-card h3 {
+    font-size: 1.4rem;
+    color: var(--blush);
+    margin-bottom: .5rem;
+}
+
+.tip-card p {
+    font-size: 1rem;
+    margin-bottom: .8rem;
+    color: var(--graphite);
+}
+
+.tip-card ul {
+    padding-left: 1.3rem;
+}
+
+.tip-card ul li {
+    margin-bottom: .4rem;
+    color: var(--graphite);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+footer {
+    border-top: 3px solid var(--softblush);
+    background-color: var(--blush);
+    color: #fff;
+    padding: 2rem 1rem;
+}
+
+/* FOOTER NAV STYLING */
+footer .navigation nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /* Space between links */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .navigation nav ul li a {
+    text-decoration: none;
+    color: white;
+    /* Adjust to match header */
+    font-size: 1rem;
+}
+
+/* Make footer content vertical and centered */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* FOOTER NAVIGATION (styled to match header nav) */
+.footer-content .navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-content .navigation a {
+    text-decoration: none;
+    padding: 10px 16px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    color: white;
+    transition: background 0.3s ease;
+    background-color: var(--blush);
+}
+
+.footer-content .navigation a:hover,
+.footer-content .navigation a.active {
+    background-color: var(--graphite);
+    color: var(--white);
+}
+
+/* Footer-left text */
+.footer-left p,
+.footer-left a {
+    color: white;
+    margin: 0.3rem 0;
+    font-size: 1.3rem;
+}
+
+/* Footer-right centered */
+.footer-right {
+    text-align: center;
+}
+
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   MOBILE (≤ 600px)
+========================================= */
+@media (max-width: 600px) {
+
+    header {
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    .logo-site {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #menuButton {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--graphite);
+        margin-left: auto;
+    }
+
+    header nav ul {
+        display: none;
+        flex-direction: column;
+        background: var(--blush);
+        padding: 1rem 0;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        z-index: 500;
+    }
+
+    nav ul li a {
+        padding: 12px 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li a:hover {
+        background: var(--white);
+        color: var(--black);
+    }
+
+    .tips-page {
+        padding: 1rem;
+    }
+
+    footer nav ul {
+        gap: 20rem;
+        /* or whatever spacing you want */
+    }
+
+    footer nav ul li a {
+        padding: 0;
+        margin: 0;
+        /* no weird stretching */
+    }
+
+    footer .navigation nav ul {
+        align-items: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content .navigation {
+        justify-content: space-between;
+    }
+}

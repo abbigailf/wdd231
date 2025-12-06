@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cookie Creations offers delicious cookie recipes, baking tips, and helpful guidance for bakers of all skill levels.">
+    <meta name="author" content="Abbigail Nelson">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script type="module" src="scripts/menu.js"></script>
+    <script type="module" src="scripts/recipes.js"></script>
+
+    <meta property="og:title" content="Cookie Creations | Form submission">
+    <meta property="og:description"
+        content="Discover cookie creations delicious cookie recipes, baking tips, and helpful guidance for bakers of all skill levels.">
+    <meta property="og:image" content="https://abbigailf.github.io/wdd231/final/images/og-form-result.jpg">
+    <meta property="og:url" content="https://abbigailf.github.io/wdd231/final/form-result.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico">
+    <title>Form Submission</title>
+</head>
+
+<body>
+    <h1>Thank You!</h1>
+    <p>Your form submission is below:</p>
+
+    <div id="results"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        let output = "";
+
+        params.forEach((value, key) => {
+            output += `<p><strong>${key}:</strong> ${value}</p>`;
+        });
+
+        document.getElementById("results").innerHTML = output;
+    </script>
+
+</body>
+
+</html>
